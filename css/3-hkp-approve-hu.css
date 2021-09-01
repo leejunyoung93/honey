@@ -1,0 +1,272 @@
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container .tree-box {
+    position: fixed;
+    top: 0;
+    left: -5rem;
+    height: 100vh;
+}
+
+.tree-box .tree {
+    height: 100%;
+}
+
+.tree-box .leaf-bottom {
+    top: 2rem;
+    left: 5rem;
+}
+
+.container .top-box {
+    color: white;
+    width: 100%;
+}
+
+.top-box .title {
+    font-size: 1.625rem;
+    font-weight: bold;
+}
+.top-box .description {
+    font-size: 0.85rem;
+    margin: 2rem 0;
+}
+
+.top-box .fill-text,
+.border-text {
+    font-size: 0.85rem;
+    max-width: 21.25rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    border-radius: 20px;
+    background-size: cover;
+}
+.top-box .fill-text {
+    background-image: url("../img/rectangle-6-3@2x.png");
+    margin-bottom: 1rem;
+}
+.top-box .border-text {
+    background-image: url("../img/rectangle-7-3@2x.png");
+}
+
+.top-box .timer-box {
+    width: 15rem;
+    height: 15rem;
+    background-image: url("../img/group-2-3@2x.png");
+    background-size: cover;
+}
+
+.timer {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.timer .timer-label {
+    display: inline-block;
+    background: black;
+    color: #ffc329;
+    width: 100px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.timer .timer-value {
+    width: 140px;
+}
+
+.total-box {
+    width: 100%;
+    padding: 1.5rem 0;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.075)
+    );
+}
+
+.total {
+    width: 25%;
+    text-align: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.total:last-child {
+    border-right: none;
+}
+
+.total .total-label {
+    font-size: 0.625rem;
+    margin-bottom: 0.75rem;
+    color: #ffc329;
+}
+
+.total .total-value {
+    color: white;
+    font-weight: bold;
+}
+
+.card {
+    position: relative;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    text-align: center;
+}
+
+.card .status {
+    position: absolute;
+    left: -0.75rem;
+    width: 5.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 0.875rem;
+    border-radius: 0.5rem;
+}
+
+.card .status.earned {
+    background: #e4ad24;
+    color: black;
+}
+
+.card .status.staked,
+.card .status.apply {
+    background: #3482e9;
+}
+
+.card .simbol {
+    width: 3.375rem;
+    height: 3.375rem;
+}
+
+.card .card-value {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #ffc329;
+    margin: 0.5rem 0 1.175rem;
+}
+
+.card-value .unit {
+    color: white;
+}
+
+.card-btn {
+    height: 1.875rem;
+    border-radius: 0.5rem;
+    border: none;
+    color: #fff;
+}
+.card-btn.approve-btn,
+.card-btn.apply-btn {
+    width: 10rem;
+    background: #3482e9;
+}
+
+.card-btn.apply-btn,
+.card-btn.withdraw-btn {
+    width: 6rem;
+}
+
+.card-btn.withdraw-btn {
+    background: #8834e9;
+    margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .container .tree-box {
+        display: none;
+    }
+    .container .top-box {
+        text-align: center;
+        background: url("../img/group-53-1@1x.png");
+        background-size: cover;
+    }
+    .top-box .fill-text,
+    .top-box .border-text,
+    .top-box .timer-box {
+        margin: 0 auto;
+    }
+    .top-box .border-text {
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+    .top-box .timer-box {
+        position: relative;
+    }
+
+    .top-box .layout {
+        padding: 5rem 2rem 3rem;
+    }
+
+    .total-box .layout {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .total {
+        width: 50%;
+        border-right: none;
+        margin: 1rem 0;
+    }
+    .total:nth-child(1),
+    .total:nth-child(3) {
+        border-right: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .card-box {
+        padding: 3rem 2rem;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .card:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container .top-box {
+        background: url("../img/group-51-4@1x.png");
+        background-size: 100% 22rem;
+    }
+
+    .top-box .timer-box {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+    .container .layout {
+        position: relative;
+        width: 768px;
+        margin: 0 auto;
+    }
+    .top-box .layout {
+        padding: 5rem 0 3rem;
+    }
+
+    .total-box .layout,
+    .card-box .layout {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .card-box {
+        padding: 3rem 0;
+    }
+    .card {
+        width: calc(100% / 3 - 1rem);
+    }
+}
